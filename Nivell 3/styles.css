@@ -76,6 +76,10 @@ h1 {
     display: inline-flex;
 }
 
+#textJoke {
+    overflow-wrap: anywhere;
+}
+
 #btn-score1,
 #btn-score2,
 #btn-score3 {
@@ -84,13 +88,13 @@ h1 {
     margin-right: 1rem;
 }
 
+/* ------------------------------------*/
+/* ------------ RESPONSIVE ------------*/
+/* ------------------------------------*/
+
+
 @media (max-width: 1024px) {
-    /* .container {
-        margin: 0;
-        width: 100vw;
-        max-width: none;
-        background-size: 100vw;
-    } */
+
     .content {
         width: 100%;
     }
@@ -122,7 +126,6 @@ h1 {
     }
     
 }
-
 
 @media (max-width: 500px)  {
 
