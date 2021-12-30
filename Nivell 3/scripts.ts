@@ -27,6 +27,8 @@
 
 window.onload = getRandomFunctions
 
+//HACER JQUERI EN 800 Y MÒBIL CON LA PEQUITA
+//HACER UN RANDOM MATH PARA QUE CAMBIE DE FONDOS
 
 //DECLARACIÓN DE ELEMENTOS//
 
@@ -131,10 +133,26 @@ function getRandomFunctions() {
     getCHNJokePromise()
   else 
     getIJokePromise()
-}
+
+  if (val <= 3) {
+    document.getElementById('fondo').classList.remove('imagen-2', 'imagen-3')
+    document.getElementById('fondo').classList.add('imagen-1')
+    //isar IMG 1
+  }
+  if (val > 3 && val <= 7) {
+  document.getElementById('fondo').classList.remove('imagen-1', 'imagen-3')
+  document.getElementById('fondo').classList.add('imagen-2')
+    //usar IMG 2
+  }
+  if (val > 7) {
+    //usar IMG 3
+    document.getElementById('fondo').classList.remove('imagen-1', 'imagen-2')
+    document.getElementById('fondo').classList.add('imagen-3')
+  }
+} 
 
 
-document.getElementById('button').addEventListener('click', () => {
+document.getElementById('btn-seg-ac').addEventListener('click', () => {
   getRandomFunctions()
 })
 
@@ -158,8 +176,3 @@ let counter: number = 1;
 //   }
 // }
 
-// const arrayPrueba = [0, 1, 2]
-
-// function getFunctionFromArray() {
-
-// }

@@ -7,38 +7,43 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="./styles.css">
   
 </head>
 <body>
 <div class="container-gral">
-  <div class="container-temp d-flex align-items-start">
-    <p id="tempText" class="m-3">
+  <div class="container-temp m-3 position-absolute top-0 start-0">
+    <img class="temp-icon" src="./Imagenes/weather-forecast.png" alt="tiempo">
+    <p id="tempText" class="tempText">
 
     </p>
   </div>
-  <div class="container p-5">
-    <h1>¡Acudit generator!</h1>
-    
-    <hr class="bg-dark border-2 border-top border-dark">
-    
-    <p id="textBanner" class="textBanner">
-        [ · Prem el botó <b>Seguent acudit</b> per obtenir un nou acudit · ]
-    </p>
+  <div id="fondo" class="container">
+    <div class="content">
+      
+      <div class="titleCont">
+      <h1>¡Acudit generator!</h1>
+      </div>
 
-    <div class="container p-4 mt-3 mb-3 d-flex align-items-center shadow-lg p-3 mb-5 bg-white rounded">
-      <p id="textJoke" class="m-0">
+      <p id="textBanner" class="textBanner">
+          [ · Prem el botó <b>Seguent acudit</b> per obtenir un nou acudit · ]
       </p>
-    </div>
 
+      <div class="container-ac p-4 mt-3 mb-3 d-flex align-items-center shadow-lg p-3 mb-5 bg-white rounded justify-content-center">
+        <p id="textJoke" class="m-0">
+        </p>
+      </div>
+
+      
+      <div class="score-cont d-flex justify-content-center mt-3 mb-3">
+        <button type="button" id="btn-score1" class="btn btn-success border border-dark border-rounded">🤣</button>
+        <button type="button"id="btn-score2" class="btn btn-warning border border-dark border-rounded">🙂</button>
+        <button type="button"id="btn-score3" class="btn btn-danger border border-dark border-rounded">😶</button>
+      </div>
+
+      <button id="btn-seg-ac" class="btn btn-primary"> Seguent acudit</button>
+    </div>
     
-    <div class="score-cont d-flex justify-content-center mt-3 mb-3">
-       <button type="button" id="btn-score1" class="btn btn-success mx-3 border border-dark border-rounded" style="font-size: 2rem;">🤣</button>
-       <button type="button"id="btn-score2" class="btn btn-warning mx-3 border border-dark border-rounded" style="font-size: 2rem;">😐</button>
-       <button type="button"id="btn-score3" class="btn btn-danger mx-3 border border-dark border-rounded" style="font-size: 2rem;">☹️</button>
-    </div>
-
-    <button id="button" class="btn btn-primary"> Seguent acudit</button>
 
   </div>
 </div>
@@ -46,6 +51,6 @@
 
 </body>
 
-<script src="/scripts.js"></script>
+<script src="./scripts.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </html>

@@ -3,21 +3,62 @@ body {
 }
 
 .container-gral {
-    background-image: url(./Imagenes/wallpaperbetter.jpg);
     height: 100vh;
     width: auto;
-    background-repeat: no-repeat;
-    background-size:cover;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
 .container {
-    height: fit-content;
-    width: fit-content;
-    background:rgba(255,255,255, 0.5);
+    height: 100vh;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
 }
+
+.temp-icon {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+
+.imagen-1,
+.imagen-2,
+.imagen-3{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.titleCont {
+    border-bottom: 1px solid black;
+    width: fit-content;
+    margin: 0% auto 2% auto;
+}
+
+h1 {
+    padding-bottom: 1%;
+}
+
+.imagen-1 {
+    background-image: url(./Imagenes/blob.svg);
+}
+
+.imagen-2{
+    background-image: url(./Imagenes/blob-2.svg);
+}
+
+.imagen-3{
+    background-image: url(./Imagenes/blob\ còpia.svg);
+}
+
+.content{
+    width: 50%;
+}
+
 .textBanner {
     text-align: center;
     font-size: 1.2rem;
@@ -25,4 +66,101 @@ body {
 
 #tempText {
     font-size: 1.5rem;
+    display: inline-block;
+    border-left: 1px solid black;
+    padding-left: 10px;
+    margin: 1rem;
+}
+
+.container-temp {
+    display: inline-flex;
+}
+
+#btn-score1,
+#btn-score2,
+#btn-score3 {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 1024px) {
+    /* .container {
+        margin: 0;
+        width: 100vw;
+        max-width: none;
+        background-size: 100vw;
+    } */
+    .content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    
+    .content {
+        margin: 0;
+        width: 50%;
+        max-width: none;
+        background-size: 100vw;
+        background-color: rgb(254, 236, 233, 0.7);
+        background-size: contain;
+    }
+    .container {
+        margin: 0;
+        width: 100vw;
+        max-width: none;
+        background-size: 100vw;
+    }
+    #tempText {
+        font-size: 1.3rem;
+    }
+    .temp-icon {
+        width: 40px;
+        height: 40px;
+
+    }
+    
+}
+
+
+@media (max-width: 500px)  {
+
+    .content {
+        background-color: rgb(254, 236, 233, 0.7);
+        background-size: contain;
+        width: 50%;
+    }
+    #textJoke {
+        font-size: 0.5rem;
+    }
+    .textBanner {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+
+    #btn-score1,
+    #btn-score2,
+    #btn-score3 {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;;
+    }
+    #tempText {
+        font-size: 1rem;
+        border-left: none;
+        border-top: 1px solid black;
+        padding-left: 0px;
+        margin: 0px;
+    }
+    .temp-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .container-temp {
+        display: inline-grid;
+    }
 }
