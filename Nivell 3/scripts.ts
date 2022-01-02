@@ -101,7 +101,7 @@ document.getElementById('btn-score3').addEventListener('click', () => {
 
 
 
-//FUNCIÓN PARA OBTENER CHISTES DE CHUK NORRIS//
+//FUNCIÓN PARA OBTENER CHISTES DE CHUCK NORRIS//
 
 function getCHNJokePromise() {
   fetch('https://api.chucknorris.io/jokes/random', {
