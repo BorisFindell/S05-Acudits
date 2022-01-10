@@ -1,26 +1,3 @@
-
-
-//PARA RECORDAR//
-//FORMA CON ASYNC + AWAIT//
-
-// async function getJoke() {
-//   try {
-//     const jokeData = await fetch('https://icanhazdadjoke.com/', {
-//       headers: {
-//         'Accept': 'application/json'
-//       }
-//     });
-//     const jokeObj = await jokeData.json()
-//     console.log(jokeObj.joke);
-//   } catch (error){
-//     console.log(error);
-//   }
-// }
-
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-
-
 //NIVELL 1 I 2
 
 //SE CARGA LA FUNCION AL COMIENZO PARA QUE NO APAREZCA VACÍO//
@@ -32,7 +9,8 @@ window.onload = getRandomFunctions
 
 let reportAcudits: Array<object> = []
 const d = new Date();
-
+class Joke {text: string; score: number; date: Date};
+let joke: Joke;
 
 //FUNCIÓN PARA OBTENER Y ESCRIBIR EN PANTALLA LA TEMPERATURA ACTUAL DE BARCELONA//
 
@@ -71,7 +49,9 @@ function getIJokePromise() {
     return response.json()
   }).then(
     data =>{
-      document.getElementById('textJoke').innerHTML = data.joke
+      document.getElementById('textJoke').innerHTML = data.joke;
+      joke = new Joke();
+      joke.text = data.joke;
     }
   )
   .catch((error)=>{
@@ -83,18 +63,21 @@ function getIJokePromise() {
 //SCORE, A SU VEZ AL CLICKEAR HACE EL PUSH AL ARRAY DE ACUDITS//
 
 document.getElementById('btn-score1').addEventListener('click', () => {
-  reportAcudits.push({joke: document.getElementById('textJoke').textContent, score: 1, date: d})
-  console.log(reportAcudits);
+  joke.score = 1;
+  joke.date = d;
+  console.log(joke);
 })
 
 document.getElementById('btn-score2').addEventListener('click', () => {
-  reportAcudits.push({joke: document.getElementById('textJoke').textContent, score: 2, date: d})
-  console.log(reportAcudits);
+  joke.score = 2;
+  joke.date = d;
+  console.log(joke);
 })
 
 document.getElementById('btn-score3').addEventListener('click', () => {
-  reportAcudits.push({joke: document.getElementById('textJoke').textContent, score: 3, date: d})
-  console.log(reportAcudits);
+  joke.score = 3;
+  joke.date = d;
+  console.log(joke);
 })
 
 
@@ -112,6 +95,8 @@ function getCHNJokePromise() {
   }).then(
     data =>{
       document.getElementById('textJoke').innerHTML = data.value
+      joke = new Joke();
+      joke.text = data.value;
     }
   )
   .catch((error)=>{
@@ -125,7 +110,6 @@ function getCHNJokePromise() {
 function getRandomFunctions() {
   
   let val: number = Math.floor(Math.random() * 10)
-  console.log(val);
   
   if (val >= 5)
     getCHNJokePromise()
@@ -134,32 +118,9 @@ function getRandomFunctions() {
 }
 
 
-document.getElementById('button').addEventListener('click', () => {
+document.getElementById('btn-seg-ac').addEventListener('click', () => {
+  if (joke.score != undefined)
+    reportAcudits.push(joke)
   getRandomFunctions()
+  console.log(reportAcudits);
 })
-
-let counter: number = 1;
-
-//FUNCIÓN PARA OBTENER FUNCIONES ALTERNADAS//
-
-// function getAltFunctions() {
-
-//   if (counter == 1){
-//     getCHNJokePromise()
-//     counter +=1
-//   }
-//   else if (counter == 2){
-//     getIJokePromise()
-//     counter +=1
-//   }
-//   else if (counter == 3){
-//     console.log('aquí iría un tercero')
-//   counter = 1
-//   }
-// }
-
-// const arrayPrueba = [0, 1, 2]
-
-// function getFunctionFromArray() {
-
-// }

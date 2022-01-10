@@ -44,15 +44,15 @@ h1 {
 }
 
 .imagen-1 {
-    background-image: url(./Imagenes/blob.svg);
+    background-image: url(./Imagenes/fondo1.svg);
 }
 
 .imagen-2{
-    background-image: url(./Imagenes/blob-2.svg);
+    background-image: url(./Imagenes/fondo2.svg);
 }
 
 .imagen-3{
-    background-image: url(./Imagenes/blob\ còpia.svg);
+    background-image: url(./Imagenes/fondo3.svg);
 }
 
 .content{
